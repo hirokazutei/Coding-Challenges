@@ -23,8 +23,26 @@ In Preparation for Interviews, I am coding common data structures and algorithms
   Closed addressing refers to the use of another data structure when collision occurs. Commonly, a linked list is used to solve collisions. When there is a collision, the datum being stored can be pointed to by the current occupant of where the datum was intended to be stored. 
 
 ### A. Self Implimentation
-  File Name: "1. Hash Table.py"
+  File Name: "Coding Challenges/Data Structures/Hash Table.py"
 #### Comments:
- - I wasn't sure if I was making a correct form of linked list. In C/C++, I am very used to using a pointer, however, I have not had the experience of using that in Python. I will investigate later to see if I did it right or wrong.
+ - I was not sure if I was making a correct form of linked list. In C/C++, I am very used to using a pointer, however, I have not had the experience of using that in Python. I will investigate later to see if I did it right or wrong.
  - I understand that a Load Factor can be calculated from "The Total Numbers of Items Stored" divided by "Size of the Array", and some structures automatically increase the size once load factor reaches a certain value. I am not quite sure how that is implemented without ruining the hash values. I will investigate further.
+ 
+ ## Sorting Algorithms
+#### What is it?
+  I am planning to code all the major sorting algorithms. I will read the explanations of the algorithm online but not the psudocode or code themselves.
+#### Insertion Sort
+  Insertion Sort takes each item from the list, compares it with the "sorted" list before its index (because the first item by itself is technically "sorted", second item can be sorted to be inserted in front of it or behind it, and so on...) and inserts the item in its appropriate position.
+#### Selection Sort
+  Selection sort involves finding the smallest item in a list, inserting that item at index[0], then repeat the process to find the second smallest item and insert it into the next index.
+##### Bubble Sort
+  Bubble sort iterate through the list and compares each index item with the next, and switching them around should the larger index item be smaller. Therefore, with the first iteration, the largest item should be at the very end of the list, meaning that next time the algorithm iterate through the list, it can igore the latter sorted items. Once the algorithm does an iteration with no swaps, the list is sorted.
+##### Quick Sort
+  Quick sort picks a pivot from the list and sorts the list so that indexes lower than the pivot will have smaller values than the pivot, while indexes higher than the pivot will have values higher than the pivot. With recursion, this process is repeated until all items are sorted in order.
+
+### A. Self Implimentation
+  File Name: "Coding Challenges/Algorithms/Sorting/Sorting.py"
+#### Comments:
+ - While most of the sorting methods were quite easy to implement, I hate to admit but the quick sort did take me some time to get it completely fool proof. However, the code for quick sort is still very sloppy and I hope to clean it up.
+ - I believe I can make bubble sort slightly faster by ignoring more of the sorted index at the back.
  
