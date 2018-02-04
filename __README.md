@@ -28,6 +28,7 @@ In Preparation for Interviews, I am coding common data structures and algorithms
  - I was not sure if I was making a correct form of linked list. In C/C++, I am very used to using a pointer, however, I have not had the experience of using that in Python. I will investigate later to see if I did it right or wrong.
  - I understand that a Load Factor can be calculated from "The Total Numbers of Items Stored" divided by "Size of the Array", and some structures automatically increase the size once load factor reaches a certain value. I am not quite sure how that is implemented without ruining the hash values. I will investigate further.
  
+ 
  ## Sorting Algorithms
 #### What is it?
   I am planning to code all the major sorting algorithms. I will read the explanations of the algorithm online but not the psudocode or code themselves.
