@@ -8,6 +8,10 @@ In Preparation for Interviews, I am coding common data structures and algorithms
 ##### B. I will evaluate my code and find potential problems and improvements that I could made.
 ##### C. I will compare my code to a conventionally written one and study how I could have written it better or had I made any mistakes.
 
+
+
+
+
 ## Hash Table
 #### What is it?
   My understanding of a hash table is that: it is a data structure which each datum being stored has a key and whatever data associated with that key (a name [key] and a phone number [data], for example).
