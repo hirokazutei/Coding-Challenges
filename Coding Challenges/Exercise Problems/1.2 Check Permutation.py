@@ -7,7 +7,6 @@ stringB = "ihgfedcba"
 ## A. Brute Force method involves creating all possible permutations of both strings and comparing them.
 ## O(N!) Incredibly inefficient
 
-
 def permutate(num):
     if (len(permlist) - 1 == num):
         complist.append(''.join(permlist))

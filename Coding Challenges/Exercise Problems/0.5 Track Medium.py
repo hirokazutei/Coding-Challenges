@@ -1,3 +1,4 @@
+# 0.5 Track Medium
 # Numbers are randomly generated and sorted into an (expanding) array.
 # How would you keep track of the median
 
@@ -60,7 +61,7 @@ def bubbleUp(newint, position):
     parent = int((position - minus)/2)
     if (parent >= 0):
         if (mintable[parent] < newint):
-            swapmin(parent, position)
+            mintable[parent], mintable[position] = mintable[position], mintable[parent]
             bubbleUp(newint, parent)
 
 def bubbleDown(newint, position):
@@ -71,7 +72,7 @@ def bubbleDown(newint, position):
     parent = int((position - minus)/2)
     if (parent >= 0):
         if (maxtable[parent] > newint):
-            swapmax(parent, position)
+            maxtable[parent], maxtable[position] = maxtable[position], maxtable[parent]
             bubbleUp(newint, parent)
 
 def popminbubble():
@@ -84,7 +85,6 @@ def popmaxbubble():
     maxtable.pop(-1)
     popbubbleUp(maxtable[0], 0)
 
-
 def popbubbleDown(popped, position):
     childL = position * 2 + 1
     childR = position * 2 + 2
@@ -92,14 +92,14 @@ def popbubbleDown(popped, position):
         if (childR < len(mintable) - 1):
             if (popped < mintable[childL] or popped < mintable[childR]):
                 if (mintable[childL] >= mintable[childR]):
-                    swapmin(childL, position)
+                    mintable[childL], mintable[position] = mintable[position], mintable[childL]
                     popbubbleDown(popped, childL)
                 else:
-                    swapmin(childR, position)
+                    mintable[childR], mintable[position] = mintable[position], mintable[childR]
                     popbubbleDown(popped, childR)
         else:
             if (popped < mintable[childL]):
-                swapmin(childL, position)
+                mintable[childL], mintable[position] = mintable[position], mintable[childL]
                 popbubbleDown(popped, childL)
 
 def popbubbleUp(popped, position):
@@ -109,25 +109,15 @@ def popbubbleUp(popped, position):
         if (childR < len(maxtable) - 1):
             if (popped > maxtable[childL] or popped > maxtable[childR]):
                 if (maxtable[childL] <= maxtable[childR]):
-                    swapmax(childL, position)
+                    maxtable[childL], maxtable[position] = maxtable[position], maxtable[childR]
                     popbubbleUp(popped, childL)
                 else:
-                    swapmax(childR, position)
+                    maxtable[childR], maxtable[position] = maxtable[position], maxtable[childR]
                     popbubbleUp(popped, childR)
         else:
             if (popped > maxtable[childL]):
-                swapmin(childL, position)
+                maxtable[childL], maxtable[position] = maxtable[position], maxtable[childL]
                 popbubbleUp(popped, childL)
-
-def swapmin(a, b):
-    temp = mintable[a]
-    mintable[a] = mintable[b]
-    mintable[b] = temp
-
-def swapmax(a, b):
-    temp = maxtable[a]
-    maxtable[a] = maxtable[b]
-    maxtable[b] = temp
 
 def appendRandom():
     newint = random.randint(0, 100)

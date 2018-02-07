@@ -1,5 +1,4 @@
 # 1.1 Is Unique
-
 # Implement an algorithm to determine if a string has all unique characters.
 
 string1 = "Am I Unique?" #Not Unique
