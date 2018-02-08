@@ -5,12 +5,8 @@ In Preparation for Interviews, I am coding common data structures and algorithms
 
 ## Format
 ##### A. I will first write the code to a data structure or an algorithm with Python without looking at example codes.
-##### B. I will evaluate my code and find potential problems and improvements that I could made.
-##### C. I will compare my code to a conventionally written one and study how I could have written it better or had I made any mistakes.
-
-
-
-
+##### B. I will later evaluate my code and find potential problems and improvements as I get better at coding.
+##### C. I will later compare my code to a conventionally written one and study how I could have written it better or had I made any mistakes.
 
 ## Hash Table
 #### What is it?
@@ -28,9 +24,24 @@ In Preparation for Interviews, I am coding common data structures and algorithms
 
 ### A. Self Implimentation
   File Name: "Coding Challenges/Data Structures/Hash Table.py"
-#### Comments:
- - I was not sure if I was making a correct form of linked list. In C/C++, I am very used to using a pointer, however, I have not had the experience of using that in Python. I will investigate later to see if I did it right or wrong.
- - I understand that a Load Factor can be calculated from "The Total Numbers of Items Stored" divided by "Size of the Array", and some structures automatically increase the size once load factor reaches a certain value. I am not quite sure how that is implemented without ruining the hash values. I will investigate further.
+### Comments:
+##### • Pointers
+So since I am used to C/C++, I was not sure how pointers (do they even exist??) on Python. Turns out, when you assign an object to a variable, that variable automatically becomes a pointer that points to that object. Thus, a linked list node in python can simply have a variable set to reference the next node.
+##### • Load Factor
+I understand that a Load Factor can be calculated from "The Total Numbers of Items Stored" divided by "Size of the Array", and some structures automatically increase the size once load factor reaches a certain value. I am not quite sure how that is implemented without ruining the hash values. I will investigate further.
+ 
+## Linked List
+#### What is it?
+  Linked list is a series of nodes where each node stores data as well as a pointer to the next node. When you search through a linked list, you iterate through each node, resulting in O(N). The usefulness of linked list comes from the fact that deleting a node, inserting a node or switching nodes around does not take additional memory for you are simply reassigning pointers.
+#### Singly Linked List
+  A Singly Linked List begins with a starting node that contains both the data and also a pointer that points to the next node.
+#### Doubly Linked List
+  A Doubly Linked List is mostly the same as a singly linked list except each node also points to the node previous of itself.
+
+### A. Self Implimentation
+  File Name: "Coding Challenges/Data Structures/Linked List.py"
+### Comments:
+ 
  
  
  ## Sorting Algorithms
