@@ -1,11 +1,10 @@
-# 2.1 Remove Dups
-# Write Code to remove duplicates from an unsorted linked list.
+# 2.7 Intersection
+# Given two (singly) linked lists, determine if two lists intersect.
+# Return the intersecting node.
+# Note that intersection is defined based on reference, not value.
+# That is, if kth node of the first linked list is the exact same node (by reference) as the jthnode of the second lnked list, then they are intersecting.
 
 import random
-
-length = 1000
-array = [0]*length
-
 
 class Node:
     def __init__(self, data):
@@ -130,58 +129,69 @@ class Link:
             node = node.pf
         print(list)
 
-
-# METHOD STARTS HERE:
-
-## Simply make a hash table and check (I did not bother implimenting collision solution)
+## If the linked lists are the same length, you can just iterate though the node until you find the same reference.
 ## O(N)
 
-    def removeDupHash(self, node=None):
-        if (node == None):
-            self.removeDupHash(self.start)
-        else:
-            if (array[ord(node.data) % length] == 1):
-                if (node.pf != None):
-                    node.pb.pf = node.pf
-                    node.pf.pb = node.pb
-                else:
-                    node.pb.pf = None
-                self.length = self.length - 1
-            else:
-                array[ord(node.data) % length] = 1
-            if (node.pf != None):
-                node = node.pf
-                self.removeDupHash(node)
-
-# 2.1B How would you solve this problem if a temporary buffer is not allowed?
-## Have two searches going on, comparing each variable against the rest of the list.
-## O(N**2)
-
-    def removeDupPoint(self):
-        nodeA = self.start
-        while(nodeA.pf != None):
-            nodeB = nodeA.pf
-            while(nodeB != None):
-                if (nodeA.data == nodeB.data):
-                    if (nodeB.pf != None):
-                        nodeB.pb.pf = nodeB.pf
-                        nodeB.pf.pb = nodeB.pb
-                    else:
-                        nodeB.pb.pf = None
-                    self.length = self.length - 1
-                nodeB = nodeB.pf
-            if (nodeA.pf == None):
-                break
+    def intersectSameLength(self, nodeA, nodeB):
+        while(nodeA != None):
+            if (nodeA == nodeB):
+                return nodeA
             nodeA = nodeA.pf
-        print("Duplicates Removed.")
+            nodeB = nodeB.pf
+        return False
+
+## But if the linked lists are not the same length, you can find the length and start the search from the same position.
+
+    def intersectFind(self, listA, listB):
+        lengthA = 0
+        lengthB = 0
+        node = listA.start
+        while (node != None):
+            lengthA = lengthA + 1
+            node = node.pf
+        node = listB.start
+        while (node != None):
+            lengthB = lengthB + 1
+            node = node.pf
+        if (lengthA == lengthB):
+            intersect = self.intersectSameLength(listA.start, listB.start)
+        elif (lengthA > lengthB):
+            dif = lengthA - lengthB
+            node = listA.start
+            for i in range(dif):
+                node = node.pf
+            intersect = self.intersectSameLength(node, listB.start)
+        elif (lengthA < lengthB):
+            dif = lengthB - lengthA
+            node = listB.start
+            for i in range(dif):
+                node = node.pf
+            intersect =self.intersectSameLength(listA.start, node)
+        return intersect
 
 
+
+
+# Method/Function Calls Here
+
+A = Link()
+B = Link()
+C = Link()
 X = Link()
 
-for i in range(100):
-    X.insert(chr(random.randint(97,122)))
+for i in range(20):
+    A.insert(random.randint(0, 9))
 
-#X.removeDupHash()
-X.removeDupPoint()
+for i in range(5):
+    B.insert(random.randint(0, 9))
 
-X.prinkLink()
+for i in range(5):
+    C.insert(random.randint(0, 9))
+
+A.findEnd(A.start).pf = C.start
+B.findEnd(B.start).pf = C.start
+
+A.printLink()
+B.printLink()
+
+print(X.intersectFind(A, B).data)

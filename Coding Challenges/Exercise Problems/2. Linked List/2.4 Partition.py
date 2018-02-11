@@ -120,6 +120,14 @@ class Link:
             node = self.findEnd(node.pf)
         return node
 
+    def printLink(self):
+        list = []
+        node = self.start
+        while (node != None):
+            list.append(node.data)
+            node = node.pf
+        print(list)
+
 
 # METHOD STARTS HERE:
 
@@ -175,12 +183,10 @@ X = Link()
 for i in range(10):
     X.insert(random.randint(0, 10))
 
-for i in range(X.length):
-    print("Posistion " + str(i) + " is " + str(X.findByPosition(i).data))
+X.printLink()
 
 print("\nLength is: " + str(X.length) + "\n")
 
 X.partition(5)
 
-for i in range(X.length):
-    print("Posistion " + str(i) + " is " + str(X.findByPosition(i).data))
+X.printLink

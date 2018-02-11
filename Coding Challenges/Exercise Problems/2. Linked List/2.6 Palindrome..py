@@ -118,6 +118,14 @@ class Link:
             node = self.findEnd(node.pf)
         return node
 
+    def printLink(self):
+        list = []
+        node = self.start
+        while (node != None):
+            list.append(node.data)
+            node = node.pf
+        print(list)
+
 
 ## If the linked list is a doubly linked list, we can compare from the beginning of the list to the middle against the end to the middle.
 ## Let us assume that we can only use singly linked list.
@@ -177,10 +185,7 @@ X = Link()
 for i in range(5):
     X.insert(chr(random.randint(97, 98)))
 
-for i in range(X.length):
-    print("Posistion " + str(i) + " is " + X.findByPosition(i).data)
-
-print("\nLength is: " + str(X.length) + "\n")
+X.printLink()
 
 print(X.palindromeList())
 print(X.palindromeLinked())

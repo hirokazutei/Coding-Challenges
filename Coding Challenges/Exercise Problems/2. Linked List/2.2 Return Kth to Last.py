@@ -123,6 +123,14 @@ class Link:
             node = self.findEnd(node.pf)
         return node
 
+    def printLink(self):
+        list = []
+        node = self.start
+        while (node != None):
+            list.append(node.data)
+            node = node.pf
+        print(list)
+
 
 # METHOD STARTS HERE:
 
@@ -170,5 +178,4 @@ print("Length is: " + str(X.length))
 print(X.listLength())
 print(X.findKth(10))
 
-for i in range(X.length):
-    print("Posistion " + str(i) + " is " + X.findByPosition(i).data)
+X.printLink

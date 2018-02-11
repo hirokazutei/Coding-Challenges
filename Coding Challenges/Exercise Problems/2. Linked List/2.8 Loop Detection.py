@@ -1,11 +1,7 @@
-# 2.1 Remove Dups
-# Write Code to remove duplicates from an unsorted linked list.
+# 2.8 Loop Detection
+# Given a circular linked list, implement an algorithm that returns the node at the beginning of the loop.
 
 import random
-
-length = 1000
-array = [0]*length
-
 
 class Node:
     def __init__(self, data):
@@ -130,58 +126,64 @@ class Link:
             node = node.pf
         print(list)
 
+# Method Start Here
+# Let us first determine if there IS indeed a looping linked list by having two runners and see if they intersect.
 
-# METHOD STARTS HERE:
+    def ifLoop(self):
+        slowRunner = self.start
+        fastRunner = self.start
+        found = False
+        totalCount = 0
+        loopCount = 0
+        while (fastRunner != None):
+            slowRunner = slowRunner.pf
+            fastRunner = fastRunner.pf.pf
+            if (found != True):
+                totalCount = totalCount + 1
+            if (found == True):
+                loopCount = loopCount + 1
+            if (slowRunner == fastRunner and found == False):
+                print(slowRunner.data)
+                found = True
+            elif (slowRunner == fastRunner and found == True):
+                return (totalCount, loopCount)
+        return False
 
-## Simply make a hash table and check (I did not bother implimenting collision solution)
-## O(N)
+## You can determine the loop's length by making the runners run another circle.
+## Count the total number, subtract by the length of the circle, start search for the with two runners for the start of the loop.
 
-    def removeDupHash(self, node=None):
-        if (node == None):
-            self.removeDupHash(self.start)
+    def findLoop(self):
+        if (self.ifLoop() != False):
+            totalCount, loopCount = self.ifLoop()
+            print(totalCount)
+            print(loopCount)
         else:
-            if (array[ord(node.data) % length] == 1):
-                if (node.pf != None):
-                    node.pb.pf = node.pf
-                    node.pf.pb = node.pb
-                else:
-                    node.pb.pf = None
-                self.length = self.length - 1
-            else:
-                array[ord(node.data) % length] = 1
-            if (node.pf != None):
-                node = node.pf
-                self.removeDupHash(node)
-
-# 2.1B How would you solve this problem if a temporary buffer is not allowed?
-## Have two searches going on, comparing each variable against the rest of the list.
-## O(N**2)
-
-    def removeDupPoint(self):
-        nodeA = self.start
-        while(nodeA.pf != None):
-            nodeB = nodeA.pf
-            while(nodeB != None):
-                if (nodeA.data == nodeB.data):
-                    if (nodeB.pf != None):
-                        nodeB.pb.pf = nodeB.pf
-                        nodeB.pf.pb = nodeB.pb
-                    else:
-                        nodeB.pb.pf = None
-                    self.length = self.length - 1
-                nodeB = nodeB.pf
-            if (nodeA.pf == None):
-                break
-            nodeA = nodeA.pf
-        print("Duplicates Removed.")
-
+            return False
+        plus = 0
+        startPosition = totalCount - loopCount
+        if (startPosition == 0):
+            plus = loopCount
+        runnerA = self.start
+        runnerB = self.start
+        for i in range(startPosition):
+            runnerA = runnerA.pf
+            runnerB = runnerB.pf
+        for j in range(loopCount + plus):
+            for i in range(loopCount):
+                runnerB = runnerB.pf
+            if (runnerA == runnerB):
+                return runnerA
+            runnerA = runnerA.pf
+            runnerB = runnerA
 
 X = Link()
+length = 10
 
-for i in range(100):
-    X.insert(chr(random.randint(97,122)))
+for i in range(length):
+    X.insert(chr(random.randint(97, 123)))
 
-#X.removeDupHash()
-X.removeDupPoint()
+X.printLink()
 
-X.prinkLink()
+X.end.pf = X.findByPosition(length - 5)
+
+print(X.findLoop().data)
