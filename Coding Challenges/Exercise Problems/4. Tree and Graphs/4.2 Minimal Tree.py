@@ -3,6 +3,7 @@
 # Write an algorithm to create a binary search tree with minimal height.
 
 import random
+import math
 
 class Tree:
     def __init__(self):
@@ -18,6 +19,25 @@ class Tree:
 ## Take the middle number and the quater numbers below and above will be the child nodes.
 ## Organize them otherwise if there are only two nodes.
 
+    def binaryTree(self, array):
+        if (len(array) > 2):
+            begin = 0
+            pivot = len(array)//2
+            end = len(array) - 1
+            node = self.Node(array[pivot])
+            self.root = node
+            self.root.pl = self.binaryIt(array, begin, pivot -1)
+            self.root.pr = self.binaryIt(array, pivot + 1, end)
+        elif (len(array) == 2):
+            node = self.Node(array[1])
+            self.root = node
+            node = self.Node(array[0])
+            self.root.pl = node
+        else:
+            node = self.Node(array[0])
+            self.root = node
+        return self.root
+
     def binaryIt(self, array, begin, end):
         if (end - begin == 0):
             nodemid = self.Node(array[end])
@@ -28,26 +48,24 @@ class Tree:
             nodemid.pl = nodeleft
             return nodemid
         else:
-            pivot = begin + (end - begin)//2
+            pivot = begin + math.ceil((end - begin)/2)
             nodemid = self.Node(array[pivot])
             nodemid.pl = self.binaryIt(array, begin, pivot - 1)
             nodemid.pr = self.binaryIt(array, pivot + 1, end)
             return nodemid
 
     def printTree(self):
-        queue = [self.root, " "]
+        queue = [self.root]
         while (queue != []):
-            if (queue[0] == " "):
-                print (" ")
-                queue.pop(0)
-            else:
+            list = len(queue)
+            for item in range(list):
                 if (queue[0].pl != None):
                     queue.append(queue[0].pl)
                 if (queue[0].pr != None):
                     queue.append(queue[0].pr)
-                queue.append(" ")
                 print(queue[0].data),
                 queue.pop(0)
+            print(" ")
 
 # Function/Method Call Here:
 

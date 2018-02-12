@@ -65,6 +65,8 @@ class Tree:
             print(" ")
 
 # Use a queue that is split between layers to make linked lists.
+# I used breadth first, however, the book seems to want me to do depth first too.
+# I will do that later. It is quite easy since with depth first, you can add a layer element to the recursion functions.
 
     def depthLink(self):
         list = []
