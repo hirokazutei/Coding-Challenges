@@ -5,17 +5,18 @@ class Set:
     def __init__(self, data):
         self.data = data
 
-    def powerSet(self, remaining = None, data = None):
-        if remaining is None:
-            remaining = 0
-            data = self.data
-        if remaining == len(self.data):
-            print (data)
+    def powerSet(self, data = None, array = [], start = 0):
+        if data is None:
+            print([''])
+            self.powerSet(self.data)
         else:
-            for item in range(len(data) - remaining):
-                data[0], data[item] = self.switch(data[0], data[item])
-                self.powerSet(remaining + 1, data)
-                data[0], data[item] = self.switch(data[0], data[item])
+            for item in range(start, len(data)):
+                newarray = []
+                for things in array:
+                    newarray.append(things)
+                newarray.append(data[item])
+                print(newarray)
+                self.powerSet(data, newarray, item + 1)
 
     def switch(self, a, b):
         tempA = a
