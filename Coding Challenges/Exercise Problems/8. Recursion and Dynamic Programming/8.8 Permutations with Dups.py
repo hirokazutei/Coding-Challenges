@@ -6,30 +6,37 @@ class Permutation:
         self.word = word
         self.data = []
         for char in word:
-            self.data.append(char)
+            there = False
+            for cchar in range(len(self.data)):
+                if self.data[cchar][1] is char:
+                    self.data[cchar][0] += 1
+                    there = True
+            if there is not True:
+                self.data.append([1, char])
 
-    #Use nodes instead
-
-    def permutate(self, data = None, layer = None):
+    def permutate(self, data = None, array = None):
         if data is None:
             data = []
-            layer = 0
+            array = []
             for things in self.data:
                 data.append(things)
-        if layer is len(data) -1:
-            print (data)
+        if len(data) is 1:
+            array.append(data[0])
+            print (array)
+            array.pop()
             return
-        for things in range(layer, len(data)):
-            if data[layer] is not data[things] or layer is things:
-                data[layer], data[things] = self.switch(data[layer], data[things])
-                self.permutate(data, layer + 1)
-                data[layer], data[things] = self.switch(data[layer], data[things])
-
+        for things in range(len(data)):
+            array.append(data[things])
+            temp = data.pop(things)
+            self.permutate(data, array)
+            array.pop()
+            data.insert(things, temp)
 
     def switch(self, a, b):
         tempA = a
         tempB = b
         return tempB, tempA
 
-a = Permutation('aacc')
-a.permutate()
+a = Permutation('abca')
+print(a.data)
+#a.permutate()
