@@ -20,23 +20,29 @@ class Permutation:
             array = []
             for things in self.data:
                 data.append(things)
-        if len(data) is 1:
-            array.append(data[0])
+        total = 0
+        for count in range(len(data)):
+            total += data[count][0]
+            if data[count][0] is 1:
+                remaining = count
+        if total is 1:
+            array.append(data[remaining][1])
             print (array)
             array.pop()
             return
         for things in range(len(data)):
-            array.append(data[things])
-            temp = data.pop(things)
-            self.permutate(data, array)
-            array.pop()
-            data.insert(things, temp)
+            if data[things][0] is not 0:
+                array.append(data[things][1])
+                data[things][0] -= 1
+                self.permutate(data, array)
+                array.pop()
+                data[things][0] += 1
 
     def switch(self, a, b):
         tempA = a
         tempB = b
         return tempB, tempA
 
-a = Permutation('abca')
+a = Permutation('aacc')
 print(a.data)
-#a.permutate()
+a.permutate()
