@@ -56,5 +56,6 @@ def findMissing(stringA, stringB):
         char = char + 1
     print("One character away at index: " + str(difloc))
 
+
 #Function Call
 oneAway(stringA, stringB, False)

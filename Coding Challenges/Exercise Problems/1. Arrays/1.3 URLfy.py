@@ -7,9 +7,9 @@ string = "Turn this into an URL"
 stringwspace = "Turn this into an URL        "
 stringlength = len(stringwspace)
 
-## By using a list, we can easily find the appropriate char(s) that we want to replace with something else,
+# By using a list, we can easily find the appropriate char(s) that we want to replace with something else,
 ## then join it all together into a string.
-## O(N)
+## Runtime: O(N)
 
 def listURLfy(string, find, replace):
     flength = len(find)
