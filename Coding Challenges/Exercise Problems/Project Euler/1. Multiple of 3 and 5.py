@@ -62,6 +62,14 @@ class MultipleTracker:
         else:
             return int(multiple * ((1 + largest) * (largest//2 + 0.5)))
 
+"""
+The solution on Project Euler is to treat the problem as the following function:
+Sum = (A * ∑(1 to range//A)) + (B +  ∑(1 to range//B)) - ((A * B) +  ∑(1 to range//(A + B)))
+This is a beautiful solution for regardless of the range of the problem, it can be solved in N(1).
+I had thought about this method, however, for some reason, I had dismissed it because I was adamant about
+solving this problem with no multiplication or division, thinking that it would save processing time.
+"""
+
 
 track = MultipleTracker(3, 5, 1000)
 print(track.ComputeB())

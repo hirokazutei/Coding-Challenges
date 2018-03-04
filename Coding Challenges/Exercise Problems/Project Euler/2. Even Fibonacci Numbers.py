@@ -16,14 +16,16 @@ Checking for even:
 Even numbers occur when two odd numbers are added or when two even numbers are added.
 For this reason, even numbers have a pattern in the Fibonacci sequence.
 Since we are adding the two previous numbers, IF the two previous numbers were even, the sequence will NEVER produce
-an odd number for we are never adding anything BUT even numbers. Thankfully, this is not the case for the standard
-Fibonacci sequence. If we becin with 1 and 2, those two are added to create an odd number, 3, and the subsequent sum
-will also be odd since we will be adding, an even number with an odd number. After that, since there are two odd numbers
-of 3 and 5 to add, the next resulting number will be even, an 8. This pattern of odd, odd, even, repeats, meaning that
-we can simply add every 3rd number that comes after 2.
+an odd number for we are never adding anything BUT even numbers. 
+Thankfully, this is not the case for the standard Fibonacci sequence.
+If we begin with 1 and 2, those two are added to create an odd number, 3, and the subsequent sum will also be odd 
+since we will be adding, an even number with an odd number. 
+After that, since there are two odd numbers of 3 and 5 to add, the next resulting number will be even, an 8.
+This pattern of odd, odd, even, repeats, meaning that we can simply add every 3rd number that comes after 2 (including 2).
 """
 
-def Fibonacci(range):
+# My Solution
+def FibonacciA(range):
     a = 1
     b = 2
     sum = b
@@ -38,5 +40,24 @@ def Fibonacci(range):
             a, b = b, a + b
     return sum
 
+# Best Solution
+def FibonacciB(range):
+    a = 0
+    b = 2
+    while b < range:
+        sum += b
+        a, b = a, a + b * 4
+    return sum
 
-print(Fibonacci(4000000))
+
+"""
+I have failed to recognize the beautiful structure of the Fibonacci sequence where:
+Even Fibonacci Sequence - Fe
+Fe(n) = Fe(n - 2) + Fe(n - 1) * 4
+
+This cuts the computational steps down by one thirds!
+"""
+
+
+
+print(FibonacciA(4000000))
