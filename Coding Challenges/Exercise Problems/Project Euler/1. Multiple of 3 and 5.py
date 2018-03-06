@@ -21,6 +21,7 @@ Meaning that the product of 5 becomes divisible by 3 every 3 steps. This will re
 greatly since it avoids the division process, which is typically quite processor heavy.
 """
 
+# Solution A
 class MultipleTracker:
     def __init__(self, multipleA, multipleB, range):
         self.multipleA = multipleA
@@ -47,7 +48,7 @@ class MultipleTracker:
                 product += self.multipleB
         return self.sum
 
-#Best Method
+# Optimal Solution
     def ComputeB(self):
         self.sum = 0
         self.sum += self.SumMul(self.multipleA, self.range)
@@ -62,6 +63,7 @@ class MultipleTracker:
         else:
             return int(multiple * ((1 + largest) * (largest//2 + 0.5)))
 
+# Optimal Solution Explanation
 """
 The solution on Project Euler is to treat the problem as the following function:
 Sum = (A * ∑(1 to range//A)) + (B +  ∑(1 to range//B)) - ((A * B) +  ∑(1 to range//(A + B)))

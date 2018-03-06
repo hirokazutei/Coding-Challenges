@@ -24,7 +24,7 @@ After that, since there are two odd numbers of 3 and 5 to add, the next resultin
 This pattern of odd, odd, even, repeats, meaning that we can simply add every 3rd number that comes after 2 (including 2).
 """
 
-# My Solution
+# Solution A
 def FibonacciA(range):
     a = 1
     b = 2
@@ -40,7 +40,7 @@ def FibonacciA(range):
             a, b = b, a + b
     return sum
 
-# Best Solution
+# Optimal Solution
 def FibonacciB(range):
     a = 0
     b = 2
@@ -50,6 +50,7 @@ def FibonacciB(range):
     return sum
 
 
+# Optimal Solution Explanation
 """
 I have failed to recognize the beautiful structure of the Fibonacci sequence where:
 Even Fibonacci Sequence - Fe
@@ -57,7 +58,5 @@ Fe(n) = Fe(n - 2) + Fe(n - 1) * 4
 
 This cuts the computational steps down by one thirds!
 """
-
-
 
 print(FibonacciA(4000000))

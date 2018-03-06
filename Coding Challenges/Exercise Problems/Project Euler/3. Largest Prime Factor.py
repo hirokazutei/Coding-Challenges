@@ -12,7 +12,7 @@ We can cut the process time by avoiding dividing by multiples of 2.
 We can do the same with 3, 5, 7 and other factors. 
 """
 
-# Solution 1 & Optimal Solution
+# Solution A & Optimal Solution
 def LargestPrime(num):
     largest = 0
     if num % 2 is 0:

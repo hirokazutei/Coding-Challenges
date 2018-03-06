@@ -12,7 +12,7 @@ Another method is to iterate through all the palindrome numbers from biggest to 
 of two three digit numbers.
 """
 
-# Solution 1
+# Solution A
 def NumPalindromeA(min, max):
     biggest = 0
     for i in range(max, min, -1):
@@ -36,7 +36,7 @@ def NumPalindromeA(min, max):
                 print(i, j)
     return biggest
 
-# Solution 2
+# Solution B
 def NumPalindromeB(min, max):
     maxRange = max**2
     maxLen = len(str(maxRange))
