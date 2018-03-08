@@ -133,7 +133,10 @@ class Series:
             number += 1
         return(self.largestProduct, self.currentProduct)
 
-
+"""
+Project Euler did not have an answer to this question.
+In addition, on the forums, there were no methods that seemed significantly better optimized than this one.
+"""
 
 SeriesA = Series()
 SeriesA.SetUp(
