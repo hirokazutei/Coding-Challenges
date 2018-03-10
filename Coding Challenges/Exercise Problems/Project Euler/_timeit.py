@@ -12,3 +12,6 @@ def timeit(method):
             print ('%r  %2.2f ms' % (method.__name__, (te - ts) * 1000))
         return result
     return timed
+
+def hey(n):
+    pass

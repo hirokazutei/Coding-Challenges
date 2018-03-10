@@ -13,7 +13,7 @@ Find the difference between the sum of the squares of the first one hundred natu
 """
 
 
-# Brain Storm
+# Brainstorm
 """
 The brute force method is to simply compute the sum of squares and the squares of the sum and subtract to get the difference.
 However, there should be a much more computationally light way to do this:
@@ -57,9 +57,9 @@ def SumSquareDifferenceB(limit):
     sum_sq = (2 * limit + 1) * (limit + 1) * limit / 6
     return (sum**2 - sum_sq)
 
-# Optimal Solution
+# Optimal Solution Explanation
 """
-I was not aware that there was a function the compute the sum of squares.
+Turns out that there was a function to compute the sum of squares!
 But since there is, this problem can always be solved by N(1).
 This is a great piece of knowledge to have!
 """

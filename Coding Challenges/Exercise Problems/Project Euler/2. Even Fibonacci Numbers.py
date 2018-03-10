@@ -6,7 +6,7 @@ By starting with 1 and 2, the first 10 terms will be:
 By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 """
 
-# Brain Storm
+# Brainstorm
 """
 We know that if we use recursion without memoization, this will be a disaster to compute.
 However, since the values go up to four million, I am not quite sure using memoization would be the ideal solution as well.
@@ -23,8 +23,10 @@ since we will be adding, an even number with an odd number.
 After that, since there are two odd numbers of 3 and 5 to add, the next resulting number will be even, an 8.
 This pattern of odd, odd, even, repeats, meaning that we can simply add every 3rd number that comes after 2 (including 2).
 """
+from _timeit import timeit
 
 # Solution A
+@timeit
 def FibonacciA(range):
     a = 1
     b = 2
@@ -41,9 +43,11 @@ def FibonacciA(range):
     return sum
 
 # Optimal Solution
+@timeit
 def FibonacciB(range):
     a = 0
     b = 2
+    sum = 2
     while b < range:
         sum += b
         a, b = a, a + b * 4
@@ -60,3 +64,4 @@ This cuts the computational steps down by one thirds!
 """
 
 print(FibonacciA(4000000))
+print(FibonacciB(4000000))

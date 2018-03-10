@@ -19,22 +19,9 @@ primes by checking that they are not multiples of previous primes by incrementin
 
 We speed up the process by incrementing by 2, since even numbers after 2 cannot be prime.
 """
-import time
+from _timeit import timeit
 
-def timeit(method):
-    def timed(*args, **kw):
-        ts = time.time()
-        result = method(*args, **kw)
-        te = time.time()
-        if 'log_time' in kw:
-            name = kw.get('log_name', method.__name__.upper())
-            kw['log_time'][name] = int((te - ts) * 1000)
-        else:
-            print ('%r  %2.2f ms' % (method.__name__, (te - ts) * 1000))
-        return result
-    return timed
-
-# Solution C
+# Solution A
 @timeit
 def FindNthPrimeA(N):
     track_prime = [[3, 3]]
@@ -92,10 +79,10 @@ def FindNthPrimeC(N):
     primenum = 2
     count = 0
     track_prime = []
-    if N == 1:
-        return 2
-    elif N == 2:
-        return 3
+    if N < 1:
+        return False
+    elif N <= 2:
+        return N + 1
     while primenum < N:
         count += 1
         if (IsPrime(6 * count - 1, track_prime)):
@@ -123,9 +110,10 @@ def IsPrime(candidate, primes):
 Prime candidates above 2 and 3 can actually be narrowed down to the formula 6k -/+ 1.
 For this reason, instead of incrementing 2 to find the potential candidate, one can simply increment k
 and see if the two possible outcomes end up as primes.
+As testing shows, solution A is approx. 5 times slower than B, and B is almost twice as slow as C.
 """
 
-print(FindNthPrimeA(10001))
-print(FindNthPrimeB(10001))
+#print(FindNthPrimeA(10001))
+#print(FindNthPrimeB(10001))
 print(FindNthPrimeC(10001))
 

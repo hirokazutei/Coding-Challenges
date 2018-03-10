@@ -6,7 +6,7 @@ What is the smallest positive number that is evenly divisible by all of the numb
 
 import math
 
-# Brain Storm
+# Brainstorm
 """
 Instantly, two rules comes up in mind:
 1. The value has to be able to be divided by prime numbers and prime numbers are not evenly divisible by anything but itself...
@@ -85,7 +85,7 @@ def SmallestMultipleB(min, max):
 
 # Optimal Solution Explanation
 """
-The explanation given on Project Euler is the same as Solution 2. 
+The explanation given on Project Euler is the same as Solution B. 
 """
 
 print(SmallestMultipleA(1, 20))

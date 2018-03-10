@@ -4,15 +4,18 @@ A palindromic number reads the same both ways. The largest palindrome made from 
 Find the largest palindrome made from the product of two 3-digit numbers.
 """
 
-# Brain Storm
+# Brainstorm
 """
 Since the input parameters are two 3-digit numbers, we know that the range of the answer will be from 100 to 999.
 The brute force approach is to multiply all combinations from 100 to 999 and find the largest palindrome numbers.
 Another method is to iterate through all the palindrome numbers from biggest to smallest and check if they have products
 of two three digit numbers.
 """
+from _timeit import timeit
+
 
 # Solution A
+@timeit
 def NumPalindromeA(min, max):
     biggest = 0
     for i in range(max, min, -1):
@@ -33,10 +36,11 @@ def NumPalindromeA(min, max):
                     break
             if isPalindrome and i * j > biggest:
                 biggest = i * j
-                print(i, j)
+                #print(i, j)
     return biggest
 
 # Solution B
+@timeit
 def NumPalindromeB(min, max):
     maxRange = max**2
     maxLen = len(str(maxRange))
@@ -45,7 +49,7 @@ def NumPalindromeB(min, max):
         palindrome[digit] = int(str(maxRange)[digit])
     palindrome = MakePalindrome(maxLen, palindrome)
     products = CheckMultiple(palindrome, maxLen, min, max)
-    print(products)
+    #print(products)
     return products[0] * products[1]
 
 def MakePalindrome(maxLen, palindrome):
@@ -119,6 +123,7 @@ def DecrementDigit(position, palindrome, maxLen):
 
 
 # Optimal Solution
+@timeit
 def NumPalindromeC(min, max):
     biggest = 0
     i = max
@@ -145,7 +150,7 @@ def NumPalindromeC(min, max):
                         break
                 if isPalindrome and i * j > biggest:
                     biggest = i * j
-                    print(i, j)
+                    #print(i, j)
             j -= dj
         i -= 1
     return biggest

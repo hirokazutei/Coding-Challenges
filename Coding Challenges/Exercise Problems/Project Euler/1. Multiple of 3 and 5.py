@@ -4,7 +4,7 @@ If we list all the natural numbers below 10 that are multiples of 3 or 5, we get
 Find the sum of all the multiples of 3 or 5 below 1000.
 """
 
-# Brain Storm
+# Brainstorm
 """
 Brute Force:
 The most obvious brute force solution is to increment through every number between 3 to 1000 and check if each number
@@ -29,7 +29,7 @@ class MultipleTracker:
         self.range = range
         self.sum = 0
 
-    def ComputeA(self):
+    def MultipleA(self):
         self.sum = 0
         product = self.multipleA
         while product < self.range:
@@ -49,7 +49,7 @@ class MultipleTracker:
         return self.sum
 
 # Optimal Solution
-    def ComputeB(self):
+    def MultipleB(self):
         self.sum = 0
         self.sum += self.SumMul(self.multipleA, self.range)
         self.sum += self.SumMul(self.multipleB, self.range)
@@ -74,4 +74,5 @@ solving this problem with no multiplication or division, thinking that it would 
 
 
 track = MultipleTracker(3, 5, 1000)
-print(track.ComputeB())
+print(track.MultipleA())
+print(track.MultipleB())

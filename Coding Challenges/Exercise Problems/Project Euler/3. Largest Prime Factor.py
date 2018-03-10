@@ -3,7 +3,7 @@
 """The prime factors of 13195 are 5, 7, 13 and 29.
 What is the largest prime factor of the number 600851475143 ?"""
 
-# Brain Storm
+# Brainstorm
 """
 The brute force approach is to divide the number by 2 to to the square root of itself and see if there are any remainder.
 If there is no remainder, check if the complimentary multiple is a prime or not.
