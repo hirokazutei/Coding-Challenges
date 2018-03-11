@@ -11,16 +11,21 @@ This project will not only help me improve my coding and problem solving skill, 
 
 
 ## Files
-#### Algorithms
-#### Data Structures
-#### Problems
-##### 0. Miscellaneous
-##### 1. Arrays
-##### 2. Linked List
-##### 3. Stacks and Queues
-##### 4. Trees and Graphs
-##### 8. Recursion and Dynamic Programming
-##### 10. Sorting and Searching
-##### 16. Moderate
-##### 17. Hard
-##### Project Euler
+#### [Algorithms](https://github.com/hirokazutei/Coding-Challenges/tree/master/Coding%20Challenges/Algorithms)
+##### [Sorting](
+#### [Data Structures](https://github.com/hirokazutei/Coding-Challenges/tree/master/Coding%20Challenges/Data%20Structures)
+##### Directed Graph
+##### Hash Table
+##### Linked List
+##### Stacks
+#### [Exercise Problems](https://github.com/hirokazutei/Coding-Challenges/tree/master/Coding%20Challenges/Exercise%20Problems)
+##### 0. [Miscellaneous](https://github.com/hirokazutei/Coding-Challenges/tree/master/Coding%20Challenges/Exercise%20Problems/0.%20Miscellaneous)
+##### 1. [Arrays](https://github.com/hirokazutei/Coding-Challenges/tree/master/Coding%20Challenges/Exercise%20Problems/1.%20Arrays)
+##### 2. [Linked List](https://github.com/hirokazutei/Coding-Challenges/tree/master/Coding%20Challenges/Exercise%20Problems/2.%20Linked%20List)
+##### 3. [Stacks and Queues](https://github.com/hirokazutei/Coding-Challenges/tree/master/Coding%20Challenges/Exercise%20Problems/3.%20Stack%20and%20Queues)
+##### 4. [Trees and Graphs](https://github.com/hirokazutei/Coding-Challenges/tree/master/Coding%20Challenges/Exercise%20Problems/4.%20Tree%20and%20Graphs)
+##### 8. [Recursion and Dynamic Programming](https://github.com/hirokazutei/Coding-Challenges/tree/master/Coding%20Challenges/Exercise%20Problems/8.%20Recursion%20and%20Dynamic%20Programming)
+##### 10. [Sorting and Searching](https://github.com/hirokazutei/Coding-Challenges/tree/master/Coding%20Challenges/Exercise%20Problems/10.%20Sorting%20and%20Searching)
+##### 16. [Moderate](https://github.com/hirokazutei/Coding-Challenges/tree/master/Coding%20Challenges/Exercise%20Problems/16.%20Moderate)
+##### 17. [Hard](https://github.com/hirokazutei/Coding-Challenges/tree/master/Coding%20Challenges/Exercise%20Problems/17.%20Hard)
+##### [Project Euler](https://github.com/hirokazutei/Coding-Challenges/tree/master/Coding%20Challenges/Exercise%20Problems/Project%20Euler)
