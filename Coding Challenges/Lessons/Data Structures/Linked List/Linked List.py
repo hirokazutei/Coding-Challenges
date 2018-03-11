@@ -53,6 +53,39 @@ class Link:
             else:
                 print("Out of Bound")
 
+    def deleteData(self, data):
+        delNode = self.findByData(data)
+        print("Item Does Not Exist.")
+        if (delNode == -1):
+            return -1
+        if (delNode.pb == None):
+            self.start = delNode.pf
+            self.length = self.length - 1
+        elif (delNode.pf == None):
+            self.end = delNode.pb
+            self.length = self.length - 1
+        else:
+            delNode.pb.pf = delNode.pf
+            delNode.pf.pb = delNode.pb
+            self.length = self.length - 1
+
+    def deletePosition(self, position):
+        delNode = self.findByPosition(position)
+        print("Item Does Not Exist.")
+        if (delNode == -1):
+            return -1
+        if (delNode.pb == None):
+            self.start = delNode.pf
+            self.length = self.length - 1
+        elif (delNode.pf == None):
+            self.end = delNode.pb
+            self.length = self.length - 1
+        else:
+            delNode.pb.pf = delNode.pf
+            delNode.pf.pb = delNode.pb
+            self.length = self.length - 1
+
+
     def findByData(self, data, start = None):
         if (start == None):
             return self.findByData(data, self.start)
@@ -70,6 +103,7 @@ class Link:
             return self.findByPositionB(position, self.start)
         else:
             print ("Out of Bound")
+            return -1
 
     def findByPositionB(self, position, start = None):
         if (position != 0):
@@ -81,6 +115,7 @@ class Link:
         if (node.pf != None):
             node = self.findEnd(node.pf)
         return node
+
 
 
 
@@ -97,6 +132,12 @@ X.insert("c", 1)
 X.insert("h", 6)
 X.insert("j")
 X.insert("a", 0)
+
+print("Start Data is: " + str(X.start.data))
+print("End Data is: " + str(X.end.data))
+print("Length is: " + str(X.length))
+
+X.deletePosition(8)
 
 print("Start Data is: " + str(X.start.data))
 print("End Data is: " + str(X.end.data))

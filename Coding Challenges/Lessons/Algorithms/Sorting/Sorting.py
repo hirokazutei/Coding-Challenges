@@ -4,9 +4,7 @@ def insertionSort(array):
     for item in range(len(array)):
         for compare in range(item, 0, -1):
             if (array[compare - 1] > array[compare]):
-                temp = array[compare - 1]
-                array[compare - 1] = array[compare]
-                array[compare] = temp
+                switch(compare, compare - 1)
 
 
 def selectionSort(array):
@@ -17,9 +15,7 @@ def selectionSort(array):
             if (minimum > array[min]):
                 index = min
                 minimum = array[min]
-        temp = array[item]
-        array[item] = array[index]
-        array[index] = temp
+        switch(item, index)
 
 
 def bubbleSort(array):
@@ -29,9 +25,7 @@ def bubbleSort(array):
         count = 0
         for item in range((len(array) - 1) - iteration):
            if (array[item] > array[item + 1]):
-               temp = array[item]
-               array[item] = array[item + 1]
-               array[item + 1] = temp
+               switch(item, item + 1)
                count = count + 1
         iteration = iteration + 1
 
@@ -78,7 +72,7 @@ def quickSort(array, minimum = None, maximum = None):
                 switch(pivot, maximum)
                 if (maximum - stop > 1):
                     quickSort(array, stop + 1, maximum)
-#
+
 def findPivot(minimum, maximum):
     a = array[minimum]
     b = array[(maximum + minimum) // 2]
