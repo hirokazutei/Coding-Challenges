@@ -8,7 +8,7 @@ class Permutation:
         for char in word:
             self.data.append(char)
 
-    def powerSet(self, data = None, array = None):
+    def permutate(self, data = None, array = None):
         if data is None:
             data = []
             array = []
@@ -22,7 +22,7 @@ class Permutation:
         for things in range(len(data)):
             array.append(data[things])
             temp = data.pop(things)
-            self.powerSet(data, array)
+            self.permutate(data, array)
             array.pop()
             data.insert(things, temp)
 
@@ -32,4 +32,4 @@ class Permutation:
         return tempB, tempA
 
 a = Permutation('abca')
-a.powerSet()
+a.permutate()

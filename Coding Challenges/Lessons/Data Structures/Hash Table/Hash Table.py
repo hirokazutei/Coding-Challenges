@@ -1,4 +1,4 @@
-#HashTable
+# HashTable
 
 class objectData:
     def __init__(self, key, data):
@@ -14,23 +14,22 @@ class HashTable:
         for i in range(self.hashSize):
             self.hashTable.append(empty)
 
-
-    def hashFunction(self, key):
+    def hashFunction(self, key): # Very simple hash function where keys are added and then divided by the hash size
         asciiTotal = 0
         for letter in key:
-            asciiTotal = asciiTotal + ord(letter)
+            asciiTotal += ord(letter)
         hashKey = asciiTotal % self.hashSize
         return hashKey
 
 
     def hashStore(self, objectData):
-        hashkey = self.hashFunction(objectData.key)
+        hashkey = self.hashFunction(objectData.key) # Apply hash function
         if (self.hashTable[hashkey].key == None):
             self.hashTable[hashkey] = objectData
-            print("[INFO] Data Stored at " + str(hashkey))
+            print("Data Stored at " + str(hashkey))
             return 1
         elif (self.hashTable[hashkey].key == objectData.key):
-            print("[WARNING] That Key Already Exists.")
+            print("That Key Already Exists.")
             return 0
         else:
             chain = self.hashTable[hashkey]
@@ -43,7 +42,6 @@ class HashTable:
             chain.point = objectData
             print("[INFO] Data Stored at " + str(hashkey) + " in a Chain.")
             return chain.point
-
 
     def hashEdit(self, key, data):
         hashkey = self.hashFunction(key)

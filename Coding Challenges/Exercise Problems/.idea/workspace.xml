@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a8724bc4-81c5-445c-9727-7f5329185ebb" name="Default" comment="" />
+    <list default="true" id="44280d6e-2abe-4b01-aace-dc1efe3843b4" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,7 +10,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="QuickSort.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/QuickSort.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -21,27 +32,28 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>node.data &lt;</find>
-      <find>addNumbers</find>
+      <find>lower</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/2.7 Intersection.py" />
-        <option value="$PROJECT_DIR$/2.5 Sum Lists.py" />
-        <option value="$PROJECT_DIR$/2.4 Partition.py" />
-        <option value="$PROJECT_DIR$/2.2 Return Kth to Last.py" />
-        <option value="$PROJECT_DIR$/2.1 Remove Dups.py" />
-        <option value="$PROJECT_DIR$/2.3 Delete Middle Node.py" />
-        <option value="$PROJECT_DIR$/2.6 Palindrome..py" />
-        <option value="$PROJECT_DIR$/2.8 Loop Detection.py" />
-        <option value="$PROJECT_DIR$/../3. Stack and Queues/3.5 Sort Stack.py" />
+        <option value="$PROJECT_DIR$/1.3 URLfy.py" />
+        <option value="$PROJECT_DIR$/1.4 Palindrome Permutation.py" />
+        <option value="$PROJECT_DIR$/1.5 One Way.py" />
+        <option value="$PROJECT_DIR$/QuickSort.py" />
+        <option value="$PROJECT_DIR$/1.2 Check Permutation.py" />
+        <option value="$PROJECT_DIR$/1.1 Is Unique.py" />
+        <option value="$PROJECT_DIR$/0.5 Track Medium.py" />
+        <option value="$PROJECT_DIR$/1.6 String Compression.py" />
+        <option value="$PROJECT_DIR$/1.7 Rotate Matrix.py" />
+        <option value="$PROJECT_DIR$/1.8 Zero Matrix.py" />
+        <option value="$PROJECT_DIR$/1.9 String Rotation.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
+    <option name="x" value="13" />
     <option name="y" value="23" />
     <option name="width" value="1400" />
     <option name="height" value="837" />
@@ -61,19 +73,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="2. Linked List" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2. Linked List" type="462c0819:PsiDirectoryNode" />
+              <item name="Problems" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Problems" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -91,8 +103,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.3.5 Sort Stack">
-    <configuration name="2.5 Sum Lists" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.1.9 String Rotation">
+    <configuration name="0.5 Track Medium" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -103,14 +115,14 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="2. Linked List" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2.5 Sum Lists.py" />
+      <module name="Problems" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/0.5 Track Medium.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="2.6 Palindrome." type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="1.6 String Compression" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -121,14 +133,14 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="2. Linked List" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2.6 Palindrome..py" />
+      <module name="Problems" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1.6 String Compression.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="2.7 Intersection" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="1.7 Rotate Matrix" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -139,14 +151,14 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="2. Linked List" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2.7 Intersection.py" />
+      <module name="Problems" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1.7 Rotate Matrix.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="2.8 Loop Detection" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="1.8 Zero Matrix" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -157,45 +169,45 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="2. Linked List" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2.8 Loop Detection.py" />
+      <module name="Problems" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1.8 Zero Matrix.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="3.5 Sort Stack" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="1.9 String Rotation" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../3. Stack and Queues" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="2. Linked List" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../3. Stack and Queues/3.5 Sort Stack.py" />
+      <module name="Problems" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1.9 String Rotation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.2.6 Palindrome." />
-      <item index="1" class="java.lang.String" itemvalue="Python.2.5 Sum Lists" />
-      <item index="2" class="java.lang.String" itemvalue="Python.2.7 Intersection" />
-      <item index="3" class="java.lang.String" itemvalue="Python.2.8 Loop Detection" />
-      <item index="4" class="java.lang.String" itemvalue="Python.3.5 Sort Stack" />
+      <item index="0" class="java.lang.String" itemvalue="Python.0.5 Track Medium" />
+      <item index="1" class="java.lang.String" itemvalue="Python.1.6 String Compression" />
+      <item index="2" class="java.lang.String" itemvalue="Python.1.7 Rotate Matrix" />
+      <item index="3" class="java.lang.String" itemvalue="Python.1.8 Zero Matrix" />
+      <item index="4" class="java.lang.String" itemvalue="Python.1.9 String Rotation" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.3.5 Sort Stack" />
-        <item index="1" class="java.lang.String" itemvalue="Python.2.8 Loop Detection" />
-        <item index="2" class="java.lang.String" itemvalue="Python.2.5 Sum Lists" />
-        <item index="3" class="java.lang.String" itemvalue="Python.2.6 Palindrome." />
-        <item index="4" class="java.lang.String" itemvalue="Python.2.7 Intersection" />
+        <item index="0" class="java.lang.String" itemvalue="Python.1.9 String Rotation" />
+        <item index="1" class="java.lang.String" itemvalue="Python.1.8 Zero Matrix" />
+        <item index="2" class="java.lang.String" itemvalue="Python.1.7 Rotate Matrix" />
+        <item index="3" class="java.lang.String" itemvalue="Python.1.6 String Compression" />
+        <item index="4" class="java.lang.String" itemvalue="Python.0.5 Track Medium" />
       </list>
     </recent_temporary>
   </component>
@@ -207,18 +219,19 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a8724bc4-81c5-445c-9727-7f5329185ebb" name="Default" comment="" />
-      <created>1518103971364</created>
+      <changelist id="44280d6e-2abe-4b01-aace-dc1efe3843b4" name="Default" comment="" />
+      <created>1517928095915</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1518103971364</updated>
+      <updated>1517928095915</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="23" width="1400" height="837" extended-state="0" />
+    <frame x="13" y="23" width="1400" height="837" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -245,66 +258,39 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/2.1 Remove Dups.py">
+    <entry file="file://$PROJECT_DIR$/QuickSort.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="130" column="19" lean-forward="false" selection-start-line="130" selection-start-column="19" selection-end-line="130" selection-end-column="19" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2.2 Return Kth to Last.py">
+    <entry file="file://$PROJECT_DIR$/1.3 URLfy.py" />
+    <entry file="file://$PROJECT_DIR$/1.4 Palindrome Permutation.py" />
+    <entry file="file://$PROJECT_DIR$/0.5 Track Medium.py" />
+    <entry file="file://$PROJECT_DIR$/1.6 String Compression.py" />
+    <entry file="file://$PROJECT_DIR$/1.7 Rotate Matrix.py" />
+    <entry file="file://$PROJECT_DIR$/1.8 Zero Matrix.py" />
+    <entry file="file://$PROJECT_DIR$/1.1 Is Unique.py" />
+    <entry file="file://$PROJECT_DIR$/1.5 One Way.py" />
+    <entry file="file://$PROJECT_DIR$/1.2 Check Permutation.py" />
+    <entry file="file://$PROJECT_DIR$/1.9 String Rotation.py" />
+    <entry file="file://$PROJECT_DIR$/1.5 One Way.py" />
+    <entry file="file://$PROJECT_DIR$/1.2 Check Permutation.py" />
+    <entry file="file://$PROJECT_DIR$/1.3 URLfy.py" />
+    <entry file="file://$PROJECT_DIR$/1.4 Palindrome Permutation.py" />
+    <entry file="file://$PROJECT_DIR$/1.1 Is Unique.py" />
+    <entry file="file://$PROJECT_DIR$/0.5 Track Medium.py" />
+    <entry file="file://$PROJECT_DIR$/1.6 String Compression.py" />
+    <entry file="file://$PROJECT_DIR$/1.7 Rotate Matrix.py" />
+    <entry file="file://$PROJECT_DIR$/1.8 Zero Matrix.py" />
+    <entry file="file://$PROJECT_DIR$/1.9 String Rotation.py" />
+    <entry file="file://$PROJECT_DIR$/QuickSort.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="122" column="24" lean-forward="false" selection-start-line="122" selection-start-column="24" selection-end-line="122" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2.3 Delete Middle Node.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2.4 Partition.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="183" column="16" lean-forward="false" selection-start-line="183" selection-start-column="16" selection-end-line="183" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2.5 Sum Lists.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="128" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2.7 Intersection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2.6 Palindrome..py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2.8 Loop Detection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="184" column="13" lean-forward="false" selection-start-line="184" selection-start-column="13" selection-end-line="184" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../3. Stack and Queues/3.5 Sort Stack.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="66" column="25" lean-forward="true" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="25" />
+        <state relative-caret-position="317">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
