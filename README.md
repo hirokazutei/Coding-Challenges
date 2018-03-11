@@ -11,9 +11,9 @@ This project will not only help me improve my coding and problem solving skill, 
 
 
 ## Files
-### [Algorithms](https://github.com/hirokazutei/Coding-Challenges/tree/master/Coding%20Challenges/Algorithms)
-#####  • [Sorting](https://github.com/hirokazutei/Coding-Challenges/tree/master/Coding%20Challenges/Algorithms/Sorting)
-### [Data Structures](https://github.com/hirokazutei/Coding-Challenges/tree/master/Coding%20Challenges/Data%20Structures)
+### [Algorithms](https://github.com/hirokazutei/Coding-Challenges/tree/master/Coding%20Challenges/Lessons/Algorithms)
+#####  • [Sorting](https://github.com/hirokazutei/Coding-Challenges/tree/master/Coding%20Challenges/Lessons/Algorithms/Sorting)
+### [Data Structures](https://github.com/hirokazutei/Coding-Challenges/tree/master/Coding%20Challenges/Lessons/Data%20Structures)
 #####  • Directed Graph
 #####  • Hash Table
 #####  • Linked List
