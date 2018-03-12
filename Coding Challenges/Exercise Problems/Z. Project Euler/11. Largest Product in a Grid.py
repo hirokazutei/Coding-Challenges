@@ -32,6 +32,7 @@ from _timeit import timeit
 
 # Brainstorm
 """
+Blocks
 The simplest way is to take a grid of 4x4 and find all multiples.
 We can optimize this by using the technique we have introduced in problem 8; however, due to the fact that the numbers
 are not in a long line of series, the improvements are possibly not as significant.

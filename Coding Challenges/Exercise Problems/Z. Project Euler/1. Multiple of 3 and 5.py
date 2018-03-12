@@ -14,8 +14,9 @@ Multiple:
 Another method is to compute products of 3 until it reaches beyond the range, adding up all the numbers.
 Then compute products of 5, making sure that they are indivisible by 3 (since we have computed 3 already) and 
 sum up the numbers until the multiples of 5 becomes larger or equal to 1000. This will result a process time of
-O(N/a + N/b) where a and b are the multiples.
+O(A + B) where A is N/3 and B is N/5.
 
+Optimize with Counts: Solution A
 A smarter way to check if the product of 5 is also a multiple of 3 by keeping track of iterations of products of 5.
 Meaning that the product of 5 becomes divisible by 3 every 3 steps. This will reduce the computational power
 greatly since it avoids the division process, which is typically quite processor heavy.
