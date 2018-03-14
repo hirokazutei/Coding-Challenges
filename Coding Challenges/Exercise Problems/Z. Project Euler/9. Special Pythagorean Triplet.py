@@ -50,10 +50,9 @@ def FindTripletB(num):
         for b in range(a + 1, num_limit - a):
             c = 1000 - (a + b)
             if squares[c] == (squares[a] + squares[b]):
-                print (a, b, c)
                 return a * b * c
 
-# Optimal solution
+# Solution C
 @timeit
 def FindTripletC(num):
     num_limit = int(num//2)
@@ -63,6 +62,56 @@ def FindTripletC(num):
                 c = 1000 - (a + b)
                 return a * b * c
 
+
+# Optimal Solution
+@timeit
+def FindTripletD(num):
+    num_half = num//2
+    min_limit = int((num_half)**1/2 -1)
+    if min_limit % 1 != 0:
+        min_limit = int(min_limit + 1)
+    for m in range(2, min_limit):
+        if num_half % m == 0:
+            sm = num_half // m
+            while sm % 2 == 0:
+                sm = sm//2
+            if m % 2 == 1:
+                k = m + 2
+            else:
+                k = m + 1
+            while k < 2 * m and k <= sm:
+                if sm % k == 0 and CommonDenomenator(k,m):
+                    d = num_half // (k * m)
+                    n = k - m
+                    a = d * (m * m - n * n)
+                    b = 2 * d * m * n
+                    c = d * (m * m + n * n)
+                    return (a * b * c)
+                k += 2
+
+def CommonDenomenator(a, b):
+    if a % 2 == 0 and b % 2 == 0:
+        return False
+    else:
+        a_limit = a**(1/2)
+        b_limit = b**(1/2)
+        n = 3
+        while n <= a_limit and n <= b_limit:
+            if a % n == 0 and b % n == 0:
+                return False
+            n+=2
+    return True
+
+"""
+The Pythagoras triad can also be represented by: 
+a = m**2 - n**2,  b = 2 * m * n,  c = m**2 + n**2
+m > n > 0
+
+Given this information and the fact that the primitive numbers' greatest common denominator is 1,
+one can deduce the optimal solution, which is many magnitudes faster than the other solutions.
+"""
+
 print(FindTripletA(1000))
 print(FindTripletB(1000))
 print(FindTripletC(1000))
+print(FindTripletD(1000))
