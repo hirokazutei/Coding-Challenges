@@ -96,7 +96,7 @@ def LongestCollatzSequenceC(num):
     memoize = [0] * (num+1)
     largest = [0, 0]
     for i in range(2, num):
-        if memoize[i] == 0:
+        if memoize[i] != 0:
             continue
         a = i
         c = i
@@ -128,10 +128,11 @@ def LongestCollatzSequenceC(num):
 """
 The check-off method uses a queue and appends every possible numbers that can result into a Collatz sequence that end
 up wthin 1000000. It did not account for the fact that multiple of any potential number can eventually result within
-1000000, thus filling up the queue with numbers that most likely has nothing to do with the answer. Thus this method
-proved to be too inefficient and slow.
+1000000, thus filling up the queue with numbers that most likely has nothing to do with the answer.
+This process is too 
+inefficient.
 
-Instaed, the memoization method was MUCH faster since it works within the realm of numbers that needs to be checked.
+Instead, the memoization method was MUCH faster since it works within the realm of numbers that needs to be checked.
 Optimizing it theoretically should have been able to make it faster since it is reducing the amount of processes.
 However, appending arrays and iterating through them required more processing power than simply working out the
 Collatz sequence and deal with the numbers that come in between later.
