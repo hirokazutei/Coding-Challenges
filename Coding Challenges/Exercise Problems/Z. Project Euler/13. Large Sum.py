@@ -153,6 +153,5 @@ def LargeSumB(sum, digitcount):
         final_array += int(array_sum[number])
     return str(final_array)[:digitcount]
 
-
 print(LargeSumA(sum, 10))
 print(LargeSumB(sum, 10))

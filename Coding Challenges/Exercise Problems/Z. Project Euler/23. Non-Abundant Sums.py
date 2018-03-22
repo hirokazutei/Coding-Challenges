@@ -16,13 +16,13 @@ Find the sum of all the positive integers which cannot be written as the sum of 
 # Brainstorm
 """
 Sieve Addition: [O(N**2)]
-We can use a sieve to find which numbers up to 28123 are abundant. We can then add up the combinations of abundant
-numbers to cross off any numbers that CAN be derived from adding abundant numbers.
+We can use a sieve to find which numbers up to 28123 are abundant.
+We can then add up the combinations of abundant numbers to cross off any numbers that CAN be derived from adding abundant numbers.
 We can then sum up the non-abundant numbers.
 
 Sieve Subtraction: [O(N * A) where A is the average iterations until we can determine if the number can be summed by two abundant numbers.]
-Similarly, we can use a sieve to find which numbers up to 28123 are abundant. Then for each number, we can subtract
-numbers lower than itself to see if there is a matching abundant number.
+Similarly, we can use a sieve to find which numbers up to 28123 are abundant.
+Then for each number, we can subtract numbers lower than itself to see if there is a matching abundant number.
 We can then sum up the non-abundant numbers.
 """
 
@@ -30,7 +30,7 @@ from _timeit import timeit
 
 # Solution A
 @timeit
-def SumAbundant(num):
+def SumAbundantA(num):
     sieve = [1 for i in range(num+1)]
     abundants = [0 for i in range(num+1)]
     abundant_sum = [0 for i in range(num+1)]
@@ -55,4 +55,37 @@ def SumAbundant(num):
     return total
 
 
-print(SumAbundant(28123))
+# Solution B & Optimal Solution
+@timeit
+def SumAbundantB(num):
+    sieve = [1 for i in range(num+1)]
+    abundants = [0 for i in range(num+1)]
+    abundant_sum = [0 for i in range(num+1)]
+    total = 0
+    for i in range(2, int(num//2)):
+        a = i
+        while a <= num:
+            if i != a:
+                sieve[a] += i #Does not count itself as a factor
+            a += i
+    for i in range(12, num+1):
+        if i < sieve[i]:
+            abundants[i] = sieve[i]
+    for i in range(12, num + 1):
+        for j in range(12, i//2 + 1):
+            if abundants[j] != 0 and abundants[i-j] != 0:
+                abundant_sum[i] = 1
+                break
+    for i in range(num+1):
+        if abundant_sum[i] == 0:
+            total += i
+    return total
+
+# Optimal Solution Explanation
+"""
+The speed advantage of Solution B comes with the fact that there is a break condition that prevents it from
+iterating the range of each number (unless they cannot be summed with two abundant numbers).
+"""
+
+print(SumAbundantA(28123))
+print(SumAbundantB(28123))
