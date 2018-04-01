@@ -22,7 +22,6 @@ The 12th term, F12, is the first term to contain three digits.
 
 What is the index of the first term in the Fibonacci sequence to contain 1000 digits?
 """
-from _timeit import timeit
 
 # Brainstorm
 """
@@ -31,6 +30,8 @@ it is quite easy. The only difference comes in on the different method one would
 form is to turn the number into string and use the len() method. While that is fast in smaller numbers, checking the
 floor division or comparing it against 10^digit number would be much faster when the numbers become a certain size.
 """
+from _timeit import timeit
+
 
 # Solution A
 @timeit

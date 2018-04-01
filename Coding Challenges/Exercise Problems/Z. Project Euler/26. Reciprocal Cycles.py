@@ -29,7 +29,7 @@ we have encountered.
 def ReciprocalCyclesA(num):
     array = [0, 0]
     for i in range(2, num):
-        already_divided = []
+        already_divided = [] # Keep track of the numbers that the division process has already encountered
         count = 0
         remainder = 10
         while True:
@@ -46,6 +46,7 @@ def ReciprocalCyclesA(num):
                 count += 1
         array.append(count)
     largest = max(array)
+    print(largest)
     for i in range(len(array)):
         if array[i] == largest:
             return i

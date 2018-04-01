@@ -20,12 +20,12 @@ Otherwise, treat a large number as a list (the simpliest way is to use one index
 # Solution A
 def FactorialDigitSumA(digit):
     factorial = 1
-    sum = 0
+    total = 0
     for i in range(2, digit + 1):
         factorial *= i
-    for i in str(factorial):
-        sum += int(i)
-    return sum
+    num_list = [int(i) for i in str(factorial)]
+    total = sum(num_list)
+    return total
 
 # Solution B
 def FactorialDigitSumB(digit):
